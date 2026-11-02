@@ -1,6 +1,6 @@
 # Humanizer — Installation & Usage
 
-Rewrite AI-sounding text so it reads like the writer without changing what it says. This document explains how to install and use the Humanizer skill (from blader/humanizer) in several common environments.
+Rewrite AI-sounding text so it reads like the writer without changing what it says. This document explains how to install and use the Humanizer skill. The upstream project is `blader/humanizer`. This repository, `wangxin116/humanizer-install`, contains a copy of `SKILL.md` and these installation instructions. The sections below identify which repository each installation method uses.
 
 ## Requirements / Prerequisites
 
@@ -11,7 +11,7 @@ Rewrite AI-sounding text so it reads like the writer without changing what it sa
 
 ## Quick install (recommended)
 
-Install using the Skills CLI (if you have a skills manager that supports this pattern):
+The following Skills CLI examples install from the upstream repository, `blader/humanizer`, if your skills manager supports this pattern. To install the copy included in this repository, use the manual installation instructions below.
 
 ```bash
 # global install for the current user (example)
@@ -28,7 +28,7 @@ Notes:
 
 ## Install as a plugin (example: Claude plugin marketplace)
 
-If your platform exposes a plugin/marketplace interface (example syntax shown; adapt to the platform you use):
+The following example targets the upstream repository's plugin marketplace, `blader/humanizer`; it does not install from this distribution repository. Use it only if your platform supports that marketplace and command syntax:
 
 ```text
 /plugin marketplace add blader/humanizer
@@ -40,12 +40,14 @@ Then invoke the plugin with its command (platform-dependent), for example:
 
 ## Manual install (download / local install)
 
-1. Clone the repository or download the zip:
+1. Clone this distribution repository or download its ZIP:
 
 ```bash
-git clone https://github.com/blader/humanizer.git
-cd humanizer
+git clone https://github.com/wangxin116/humanizer-install.git
+cd humanizer-install
 ```
+
+The following steps use the `SKILL.md` included in this repository. The upstream project is available at https://github.com/blader/humanizer.
 
 2. Copy the SKILL.md (or the repository contents) into your agent's skills directory as required by your agent:
 - e.g. paste `SKILL.md` into a `skills/` folder, or add the repo as an installed skill per your agent docs.
@@ -54,7 +56,7 @@ cd humanizer
 
 ## File mode and embedding
 
-Humanizer supports multiple response modes as described in SKILL.md:
+Humanizer supports multiple response modes as described in [SKILL.md](./SKILL.md):
 
 - Pasted text (default)
   - Returns: the draft, a short list of remaining patterns, and the final rewrite.
@@ -97,7 +99,7 @@ Now humanize this text:
 
 - The Humanizer skill rewrites AI-sounding text to read like the writer while keeping the original meaning.
 - It does not invent facts, names, dates, numbers, or citations. Do not expect it to add new factual content.
-- The skill follows the editing rules in SKILL.md (see repo for full list of patterns it targets: staging, rhythm by rule, inflation, formatting, leftovers, etc.).
+- The skill follows the editing rules in [SKILL.md](./SKILL.md) (see that file for the full list of patterns it targets: staging, rhythm by rule, inflation, formatting, leftovers, etc.).
 
 ## Testing & verification
 
@@ -124,9 +126,11 @@ Humanize: "This is not just a change, it's a revolution. The impact will be huge
 
 ## Contributing & source
 
-- Source repository: https://github.com/blader/humanizer
+- Upstream project: https://github.com/blader/humanizer
+- Current distribution repository and installation instructions: https://github.com/wangxin116/humanizer-install
+- Included skill: [SKILL.md](./SKILL.md)
 - License: MIT
-- Version metadata: 3.0.0 (see SKILL.md for skill metadata and the full editing rules)
+- Version metadata in the included [SKILL.md](./SKILL.md): 3.0.0
 
 ## Example install.md changelog (optional)
-- 2026-09-14 — Initial generated install.md (based on SKILL.md in blader/humanizer)
+- 2026-09-14 — Initial generated install.md (based on SKILL.md from the upstream project, blader/humanizer)
